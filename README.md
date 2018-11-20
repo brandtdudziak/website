@@ -1,4 +1,4 @@
 # website
 Personal Website
 
-brandtdudziak.com
+www.brandtdudziak.com
