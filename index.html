@@ -1,46 +1,110 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brandt Dudziak</title>
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        background: #fff;
+        color: #111;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lora:400" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,200i,400" rel="stylesheet">
+      main {
+        padding: 2rem;
+        max-width: 480px;
+        width: 100%;
+      }
 
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+      h1 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        color: #111;
+      }
 
-    <title>Brandt R. Dudziak</title>
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: #111;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.875rem 1rem;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        transition: border-color 0.15s, background 0.15s;
+      }
+
+      a:hover {
+        border-color: #111;
+        background: #f9f9f9;
+      }
+
+      .project-name {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      .project-desc {
+        font-size: 0.8rem;
+        color: #888;
+        margin-top: 0.2rem;
+      }
+
+      .arrow {
+        color: #aaa;
+        font-size: 0.85rem;
+        flex-shrink: 0;
+        margin-left: 1rem;
+      }
+    </style>
   </head>
   <body>
-    <h3>Portfolio:</h3>
-    <ul>
-        <li><a href="https://github.com/brandtdudziak/alexa-whats-at-val" target="_blank">What's at Val Alexa Skill</a></li>
-        <li><a href="https://github.com/brandtdudziak/cs247-machine-learning" target="_blank">Machine Learning Projects</a></li>
-        <li><a href="https://github.com/brandtdudziak/gamedev-2dplatformer" target="_blank">Video Game Development Class: 2D Platformer</a></li>
-        <li><a href="http://newto.com" target="_blank">Website for NewTo</a></li>
-        <li><a href="./hype_poem.html" target="_blank">Poem</a></li>
-        <li><a href="https://docs.google.com/document/d/1VDbbao2rYVfQP4ekvl0HLP4us7FSxmNcyQmDNdRir6w/edit?usp=sharing" target="_blank">Racial Justice Resources</a></li>
-    </ul>
-    <a href="https://github.com/brandtdudziak" target="_blank">GitHub</a>
-    <h4>Favorite Playlists</h4>
-    <ul>
-        <li><a href="https://open.spotify.com/playlist/4cyISpOCpBpcWgIObrZrLA?si=g5GxcnqKTJavLb1NkKcy6Q" target="_blank">roots</a></li>
-        <li><a href="https://open.spotify.com/playlist/3z5RiusXbyxu3YGjAdLTyx?si=bz7cAiYYS2mqI3FTqT5Clw" target="_blank">o</a></li>
-        <li><a href="https://open.spotify.com/playlist/6wLSlNSxgVSa5bADmzjI5M?si=krSPG8YgRm63UY2AVXq6bQ" target="_blank">generic pop punk</a></li>
-        <li><a href="https://open.spotify.com/playlist/5A1CQZH6Mdts43anbhVGFD?si=xQxjJrxOSYulUOVls5JchA" target="_blank">good morning</a></li>
-
-    </ul>
-
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/popper.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
+    <main>
+      <h1>Brandt Dudziak</h1>
+      <ul>
+        <li>
+          <a href="https://ninacsr.com" target="_blank">
+            <div>
+              <div class="project-name">Nina CSR</div>
+              <div class="project-desc">Website for a court reporting service</div>
+            </div>
+            <span class="arrow">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://ludex.brandtdudziak.com" target="_blank">
+            <div>
+              <div class="project-name">Ludex</div>
+              <div class="project-desc">Personal BoardGameGeek collection viewer</div>
+            </div>
+            <span class="arrow">↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://earmarked.brandtdudziak.com" target="_blank">
+            <div>
+              <div class="project-name">Earmarked</div>
+              <div class="project-desc">Music listening tracker</div>
+            </div>
+            <span class="arrow">↗</span>
+          </a>
+        </li>
+      </ul>
+    </main>
   </body>
 </html>
