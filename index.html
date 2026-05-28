@@ -41,20 +41,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 28px;
-        height: 28px;
-        border-radius: 6px;
-        background: #0077b5;
-        color: #fff;
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
         text-decoration: none;
-        font-size: 0.7rem;
-        font-weight: 700;
-        letter-spacing: -0.02em;
         flex-shrink: 0;
-        transition: background 0.15s;
+        opacity: 0.75;
+        transition: opacity 0.15s;
       }
 
-      .linkedin:hover { background: #005f8e; filter: none; }
+      .linkedin:hover { opacity: 1; filter: none; }
+
+      .linkedin img { display: block; border-radius: 3px; }
 
       ul {
         list-style: none;
@@ -141,7 +139,9 @@
     <main>
       <div class="header">
         <h1>Brandt Dudziak</h1>
-        <a href="https://www.linkedin.com/in/brandt-dudziak/" target="_blank" class="linkedin">in</a>
+        <a href="https://www.linkedin.com/in/brandt-dudziak/" target="_blank" class="linkedin">
+          <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" width="16" height="16">
+        </a>
       </div>
       <ul>
         <li>
