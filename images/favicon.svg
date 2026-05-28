@@ -1,22 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <!-- Black circle background -->
   <circle cx="50" cy="50" r="48" fill="#000"/>
-
-  <!-- Tail -->
-  <path fill="white" d="M 27 58 Q 14 52 7 57 Q 13 65 27 65 Z"/>
-
-  <!-- Body -->
-  <ellipse cx="47" cy="62" rx="21" ry="11" fill="white"/>
-
-  <!-- Neck -->
-  <path fill="white" d="M 59 54 C 64 43 69 30 73 18 L 78 20 C 75 33 70 46 68 57 Z"/>
-
-  <!-- Head -->
-  <ellipse cx="80" cy="15" rx="7" ry="5" fill="white" transform="rotate(-10 80 15)"/>
-
-  <!-- Legs -->
-  <rect x="29" y="70" width="6" height="14" rx="2" fill="white"/>
-  <rect x="40" y="71" width="6" height="13" rx="2" fill="white"/>
-  <rect x="52" y="71" width="6" height="13" rx="2" fill="white"/>
-  <rect x="62" y="70" width="6" height="14" rx="2" fill="white"/>
+  <path fill="white" d="
+    M 10 61
+    C 16 55, 24 51, 33 50
+    C 42 49, 50 48, 57 50
+    C 61 51, 64 49, 67 44
+    C 70 38, 72 28, 73 20
+    C 74 14, 76 10, 81 10
+    C 85 10, 88 14, 87 20
+    C 86 25, 82 27, 78 26
+    C 75 26, 73 28, 71 33
+    C 69 39, 67 48, 66 56
+    C 66 60, 66 65, 67 73
+    C 67 78, 67 83, 68 85
+    C 69 87, 72 87, 73 85
+    C 74 83, 73 78, 72 68
+    C 71 64, 67 62, 58 62
+    C 52 63, 46 63, 41 62
+    C 40 62, 40 66, 40 72
+    C 40 78, 40 83, 41 85
+    C 42 87, 45 87, 46 85
+    C 47 83, 46 77, 46 66
+    C 45 63, 39 61, 28 61
+    C 20 61, 14 63, 10 66
+    C 9 64, 9 62, 10 61
+    Z
+  "/>
 </svg>
