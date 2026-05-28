@@ -39,19 +39,59 @@
 
       a {
         text-decoration: none;
-        color: #111;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        gap: 0.875rem;
         padding: 0.875rem 1rem;
-        border: 1px solid #e5e5e5;
         border-radius: 8px;
-        transition: border-color 0.15s, background 0.15s;
+        border: 1px solid transparent;
+        transition: filter 0.15s;
       }
 
-      a:hover {
-        border-color: #111;
-        background: #f9f9f9;
+      a:hover { filter: brightness(0.93); }
+
+      /* Nina CSR — deep maroon */
+      a.nina {
+        background: #3b1010;
+        color: #fff;
+        border-color: #5a1a1a;
+      }
+      a.nina .project-desc { color: #e0c0c0; }
+      a.nina .arrow { color: #c07070; }
+
+      /* Ludex — amber */
+      a.ludex {
+        background: #fffbeb;
+        color: #78350f;
+        border-color: #fcd34d;
+      }
+      a.ludex .project-desc { color: #b45309; }
+      a.ludex .arrow { color: #d97706; }
+
+      /* Earmarked — dark vinyl */
+      a.earmarked {
+        background: #111111;
+        color: #faf6ef;
+        border-color: #333;
+      }
+      a.earmarked .project-desc { color: #999; }
+      a.earmarked .arrow { color: #c0392b; }
+
+      .icon {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+        border-radius: 6px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .icon img, .icon svg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
 
       .project-name {
@@ -61,15 +101,13 @@
 
       .project-desc {
         font-size: 0.8rem;
-        color: #888;
         margin-top: 0.2rem;
       }
 
       .arrow {
-        color: #aaa;
         font-size: 0.85rem;
         flex-shrink: 0;
-        margin-left: 1rem;
+        margin-left: auto;
       }
     </style>
   </head>
@@ -78,7 +116,10 @@
       <h1>Brandt Dudziak</h1>
       <ul>
         <li>
-          <a href="https://ninacsr.com" target="_blank">
+          <a href="https://ninacsr.com" target="_blank" class="nina">
+            <div class="icon">
+              <img src="./images/nina-favicon.jpg" alt="">
+            </div>
             <div>
               <div class="project-name">Nina CSR</div>
               <div class="project-desc">Website for a court reporting service</div>
@@ -87,7 +128,14 @@
           </a>
         </li>
         <li>
-          <a href="https://ludex.brandtdudziak.com" target="_blank">
+          <a href="https://ludex.brandtdudziak.com" target="_blank" class="ludex">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="5 5 22 22">
+                <polygon points="16,6.1 20.7,8.8 20.7,14.2 16,16.9 11.3,14.2 11.3,8.8" fill="#d97706"/>
+                <polygon points="10.8,15.1 15.5,17.8 15.5,23.2 10.8,25.9 6.1,23.2 6.1,17.8" fill="#d97706"/>
+                <polygon points="21.2,15.1 25.9,17.8 25.9,23.2 21.2,25.9 16.5,23.2 16.5,17.8" fill="#d97706"/>
+              </svg>
+            </div>
             <div>
               <div class="project-name">Ludex</div>
               <div class="project-desc">Personal BoardGameGeek collection viewer</div>
@@ -96,7 +144,23 @@
           </a>
         </li>
         <li>
-          <a href="https://earmarked.brandtdudziak.com" target="_blank">
+          <a href="https://earmarked.brandtdudziak.com" target="_blank" class="earmarked">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="6 6 88 88">
+                <defs>
+                  <clipPath id="vinyl-clip">
+                    <circle cx="50" cy="50" r="44"/>
+                  </clipPath>
+                </defs>
+                <circle cx="50" cy="50" r="44" fill="#111111"/>
+                <circle cx="50" cy="50" r="35" fill="none" stroke="#383838" stroke-width="1.5"/>
+                <circle cx="50" cy="50" r="26" fill="none" stroke="#383838" stroke-width="1.5"/>
+                <circle cx="50" cy="50" r="19" fill="none" stroke="#383838" stroke-width="1.5"/>
+                <circle cx="50" cy="50" r="15" fill="#C0392B"/>
+                <circle cx="50" cy="50" r="3.5" fill="#FAF6EF"/>
+                <path d="M64,0 L82,0 L82,40 L73,29 L64,40 Z" fill="#C0392B" clip-path="url(#vinyl-clip)"/>
+              </svg>
+            </div>
             <div>
               <div class="project-name">Earmarked</div>
               <div class="project-desc">Music listening tracker</div>
