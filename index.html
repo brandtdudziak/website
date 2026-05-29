@@ -4,6 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Brandt Dudziak</title>
+    <meta name="description" content="so it goes.">
+    <meta property="og:title" content="Brandt Dudziak">
+    <meta property="og:description" content="so it goes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.brandtdudziak.com">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Brandt Dudziak">
+    <meta name="twitter:description" content="so it goes.">
     <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -37,7 +45,22 @@
         color: #111;
       }
 
-      .linkedin {
+      .header-text { flex: 1; }
+
+      .tagline {
+        font-size: 0.8rem;
+        color: #888;
+        margin-top: 0.15rem;
+      }
+
+      .social-links {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-shrink: 0;
+      }
+
+      .linkedin, .github {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -45,14 +68,13 @@
         height: 22px;
         border-radius: 4px;
         text-decoration: none;
-        flex-shrink: 0;
         opacity: 0.75;
         transition: opacity 0.15s;
       }
 
-      .linkedin:hover { opacity: 1; filter: none; }
+      .linkedin:hover, .github:hover { opacity: 1; filter: none; }
 
-      .linkedin img { display: block; border-radius: 3px; }
+      .linkedin img, .github img { display: block; border-radius: 3px; }
 
       ul {
         list-style: none;
@@ -146,10 +168,18 @@
             <circle cx="44" cy="30" r="6" fill="#000"/>
           </g>
         </svg>
-        <h1>Brandt Dudziak</h1>
-        <a href="https://www.linkedin.com/in/brandt-dudziak/" target="_blank" class="linkedin">
-          <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" width="22" height="22">
-        </a>
+        <div class="header-text">
+          <h1>Brandt Dudziak</h1>
+          <p class="tagline">so it goes.</p>
+        </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/brandt-dudziak/" target="_blank" class="linkedin">
+            <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" width="22" height="22">
+          </a>
+          <a href="https://github.com/brandtdudziak" target="_blank" class="github">
+            <img src="https://github.com/favicon.ico" alt="GitHub" width="22" height="22">
+          </a>
+        </div>
       </div>
       <ul>
         <li>
