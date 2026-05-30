@@ -156,19 +156,49 @@
         flex-shrink: 0;
         margin-left: auto;
       }
+
+      .dino-btn {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        display: flex;
+        flex-shrink: 0;
+        border-radius: 50%;
+        transition: opacity 0.15s;
+      }
+      .dino-btn:hover { opacity: 0.75; }
+
+      .egg {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.85);
+        z-index: 100;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1.25rem;
+        cursor: pointer;
+      }
+      .egg.open { display: flex; }
+      .egg img { max-width: min(480px, 90vw); max-height: 70vh; object-fit: contain; border-radius: 6px; }
+      .egg p { color: #fff; font-style: italic; font-size: 1rem; opacity: 0.85; }
     </style>
   </head>
   <body>
     <main>
       <div class="header">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="28" height="28" aria-hidden="true">
-          <defs><clipPath id="bcp"><circle cx="50" cy="50" r="48"/></clipPath></defs>
-          <circle cx="50" cy="50" r="48" fill="#000"/>
-          <g clip-path="url(#bcp)">
-            <path fill="white" d="M 20 96 C 13 80, 13 62, 16 48 C 20 40, 26 30, 32 22 C 38 16, 46 12, 54 12 C 62 12, 70 14, 76 20 C 82 24, 88 30, 88 37 C 88 44, 83 52, 78 56 C 73 60, 62 66, 48 66 C 38 66, 30 62, 26 56 C 28 62, 30 78, 32 96 Z"/>
-            <circle cx="44" cy="30" r="6" fill="#000"/>
-          </g>
-        </svg>
+        <button class="dino-btn" aria-label="Easter egg" onclick="document.getElementById('egg').classList.add('open')">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="28" height="28" aria-hidden="true">
+            <defs><clipPath id="bcp"><circle cx="50" cy="50" r="48"/></clipPath></defs>
+            <circle cx="50" cy="50" r="48" fill="#000"/>
+            <g clip-path="url(#bcp)">
+              <path fill="white" d="M 20 96 C 13 80, 13 62, 16 48 C 20 40, 26 30, 32 22 C 38 16, 46 12, 54 12 C 62 12, 70 14, 76 20 C 82 24, 88 30, 88 37 C 88 44, 83 52, 78 56 C 73 60, 62 66, 48 66 C 38 66, 30 62, 26 56 C 28 62, 30 78, 32 96 Z"/>
+              <circle cx="44" cy="30" r="6" fill="#000"/>
+            </g>
+          </svg>
+        </button>
         <div class="header-text">
           <h1>Brandt Dudziak</h1>
           <p class="tagline">so it goes.</p>
@@ -256,5 +286,9 @@
         </li>
       </ul>
     </main>
+    <div id="egg" class="egg" onclick="this.classList.remove('open')">
+      <img src="./images/puffin.png" alt="Puffin">
+      <p>fratercula arctica brandtasaurus rex</p>
+    </div>
   </body>
 </html>
